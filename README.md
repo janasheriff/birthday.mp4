@@ -4,43 +4,41 @@
   <meta charset="UTF-8">
   <title>Happy Birthday Ya Hacker</title>
   <style>
-    body {
-      margin: 0;
-      height: 100vh;
+    * { margin: 0; padding: 0; }
+    body, html { height: 100%; font-family: Arial, sans-serif; }
+    .video-bg {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+    .content {
+      position: relative;
+      height: 100%;
       display: flex;
       justify-content: center;
       align-items: center;
-      background: #000;
-      font-family: Arial, sans-serif;
-      color: #fff;
       text-align: center;
+      color: white;
+      text-shadow: 2px 2px 5px #000;
     }
-    .card {
-      border: 2px solid #fff;
-      padding: 40px;
-      border-radius: 20px;
-      max-width: 400px;
-    }
-    h1 {
-      font-size: 36px;
-      margin-bottom: 20px;
-    }
-    .icons {
-      font-size: 40px;
-      margin: 15px 0;
-    }
-    p {
-      font-size: 18px;
-      opacity: 0.9;
-    }
+    h1 { font-size: 48px; }
+    p { font-size: 24px; margin-top: 20px; }
   </style>
 </head>
 <body>
-  <div class="card">
-    <div class="icons">🎂 🧸 🎉</div>
-    <h1>Happy Birthday<br>Ya Hacker 🖤</h1>
-    <p>Wishing you a legendary year full of wins and good vibes.</p>
-    <div class="icons">✨ 🎈 ✨</div>
+  <!-- هنا الفيديو -->
+  <video autoplay muted loop class="video-bg">
+    <source src="birthday.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
+
+  <div class="content">
+    <div>
+      <h1>Happy Birthday<br>Ya Hacker 🖤</h1>
+      <p>Wishing you a legendary year full of wins and good vibes 🎉🧸</p>
+    </div>
   </div>
 </body>
 </html>
